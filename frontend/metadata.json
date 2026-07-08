@@ -1,0 +1,5 @@
+{
+  "name": "The Digital Hearth",
+  "description": "A warm, editorial-inspired meeting platform where professional efficiency meets human comfort.",
+  "requestFramePermissions": ["camera", "microphone"]
+}

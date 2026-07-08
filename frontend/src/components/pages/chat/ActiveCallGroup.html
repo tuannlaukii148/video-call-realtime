@@ -1,0 +1,449 @@
+<!doctype html>
+
+<html class="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>The Digital Hearth - Group Call</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;600;700&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 400,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+            .editorial-shadow {
+                box-shadow:
+                    0 20px 40px -10px rgba(140, 113, 105, 0.08),
+                    0 10px 20px -5px rgba(140, 113, 105, 0.04);
+            }
+            .video-overlay-gradient {
+                background: linear-gradient(
+                    to top,
+                    rgba(29, 27, 24, 0.6) 0%,
+                    rgba(29, 27, 24, 0) 40%
+                );
+            }
+            .glass-toolbar {
+                backdrop-filter: blur(24px);
+                background: rgba(255, 248, 243, 0.8);
+            }
+        </style>
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-secondary-fixed-variant": "#852400",
+                            "surface-container": "#f3ede8",
+                            "on-primary-fixed-variant": "#842500",
+                            "outline-variant": "#dfc0b7",
+                            "surface-lowest": "#ffffff",
+                            "surface-container-highest": "#e8e1dc",
+                            "secondary-fixed": "#ffdbd0",
+                            "on-secondary-container": "#6a1b00",
+                            "on-secondary": "#ffffff",
+                            "on-surface-variant": "#58423b",
+                            "inverse-surface": "#33302d",
+                            secondary: "#a83911",
+                            "primary-fixed-dim": "#ffb59e",
+                            "on-tertiary-container": "#f0cdc2",
+                            "on-primary": "#ffffff",
+                            "on-secondary-fixed": "#3a0b00",
+                            "on-tertiary-fixed-variant": "#594139",
+                            surface: "#fff8f3",
+                            "secondary-container": "#f2dfcf",
+                            "on-background": "#1d1b18",
+                            error: "#ba1a1a",
+                            "surface-bright": "#fff8f3",
+                            "inverse-on-surface": "#f6efeb",
+                            "on-tertiary": "#ffffff",
+                            "surface-container-high": "#eee7e2",
+                            "inverse-primary": "#ffb59e",
+                            "surface-container-low": "#f9f2ed",
+                            "on-primary-container": "#ffc8b8",
+                            background: "#fff8f3",
+                            "primary-fixed": "#ffdbd0",
+                            "surface-tint": "#a73912",
+                            "error-container": "#ffdad6",
+                            tertiary: "#573f37",
+                            "surface-dim": "#dfd9d4",
+                            "tertiary-fixed": "#ffdbd0",
+                            "on-surface": "#1d1b18",
+                            "on-primary-fixed": "#3a0b00",
+                            "surface-container-lowest": "#ffffff",
+                            "surface-variant": "#e8e1dc",
+                            "tertiary-container": "#70564e",
+                            "on-tertiary-fixed": "#2a1711",
+                            "tertiary-fixed-dim": "#e1bfb5",
+                            "secondary-fixed-dim": "#ffb59e",
+                            "on-error": "#ffffff",
+                            outline: "#8c7169",
+                            "primary-container": "#a4370f",
+                            primary: "#802300",
+                            "on-error-container": "#93000a",
+                        },
+                        fontFamily: {
+                            "section-eyebrow": ["Plus Jakarta Sans"],
+                            "body-base": ["Manrope"],
+                            "label-caps": ["Manrope"],
+                            "headline-md": ["Plus Jakarta Sans"],
+                            "display-lg": ["Plus Jakarta Sans"],
+                            "body-bold": ["Manrope"],
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body
+        class="bg-background text-on-surface min-h-screen selection:bg-primary-fixed"
+    >
+        <!-- Sidebar Navigation -->
+        <aside
+            class="w-64 h-screen fixed left-0 top-0 flex flex-col bg-surface-container-low shadow-[4px_0_24px_rgba(140,113,105,0.05)] opacity-60 hover:opacity-100 transition-opacity duration-500 z-50"
+        >
+            <div class="flex flex-col h-full p-4 gap-4">
+                <!-- Brand Header -->
+                <div class="px-2 py-4">
+                    <h1
+                        class="font-display-lg text-headline-md text-primary tracking-tighter"
+                    >
+                        The Hearth
+                    </h1>
+                    <p
+                        class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest opacity-70"
+                    >
+                        Creative Studio
+                    </p>
+                </div>
+                <!-- Primary Actions -->
+                <button
+                    class="w-full py-3 px-4 bg-primary-container text-on-primary-container rounded-xl font-body-bold flex items-center gap-3 transition-transform active:scale-95 shadow-lg shadow-primary/20"
+                >
+                    <span class="material-symbols-outlined">video_call</span>
+                    New Meeting
+                </button>
+                <!-- Nav Links -->
+                <nav class="flex flex-col gap-1 mt-4">
+                    <a
+                        class="bg-primary-container text-on-primary-container rounded-xl font-body-bold px-4 py-3 flex items-center gap-3"
+                        href="#"
+                    >
+                        <span
+                            class="material-symbols-outlined"
+                            style="font-variation-settings: &quot;FILL&quot; 1"
+                            >video_call</span
+                        >
+                        Meetings
+                    </a>
+                    <a
+                        class="text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all duration-200 rounded-xl px-4 py-3 flex items-center gap-3"
+                        href="#"
+                    >
+                        <span class="material-symbols-outlined"
+                            >calendar_month</span
+                        >
+                        Schedule
+                    </a>
+                    <a
+                        class="text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all duration-200 rounded-xl px-4 py-3 flex items-center gap-3"
+                        href="#"
+                    >
+                        <span class="material-symbols-outlined">chat</span>
+                        Messages
+                    </a>
+                    <a
+                        class="text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all duration-200 rounded-xl px-4 py-3 flex items-center gap-3"
+                        href="#"
+                    >
+                        <span class="material-symbols-outlined">archive</span>
+                        Archives
+                    </a>
+                </nav>
+                <!-- Footer Nav -->
+                <div class="mt-auto pt-4 border-t border-outline-variant/20">
+                    <a
+                        class="text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all duration-200 rounded-xl px-4 py-3 flex items-center gap-3"
+                        href="#"
+                    >
+                        <span class="material-symbols-outlined">settings</span>
+                        Settings
+                    </a>
+                    <a
+                        class="text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all duration-200 rounded-xl px-4 py-3 flex items-center gap-3"
+                        href="#"
+                    >
+                        <span class="material-symbols-outlined">help</span>
+                        Support
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <!-- Top App Bar -->
+        <header
+            class="h-16 w-[calc(100%-256px)] fixed top-0 right-0 z-40 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 flex items-center justify-between px-12"
+        >
+            <div class="flex items-center gap-4">
+                <h2
+                    class="font-headline-md text-headline-md font-extrabold text-primary"
+                >
+                    Project Strategy Group
+                </h2>
+                <span
+                    class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-caps font-label-caps"
+                    >4 participants</span
+                >
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant"
+                        >notifications</span
+                    >
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant"
+                        >grid_view</span
+                    >
+                </div>
+                <div
+                    class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant/50 overflow-hidden"
+                >
+                    <img
+                        alt="User avatar"
+                        data-alt="A professional close-up portrait of a user with a friendly expression, set against a warm, studio-lit background. The lighting is soft and editorial, highlighting clear skin and sharp features, maintaining the high-end creative studio aesthetic of The Digital Hearth brand with warm cream and terracotta undertones."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxlBT3BQEg6wLPCOYUQrL3Pm4sjJnvynfFzosdFxYXidjy1PkrS2MvY26wMlu_dz3sDBk1XmmYUcHExOqzs0ygwNERILjUo01jZ30kKL04lANhVtvubsIrkNTo3AHmK34G7Ye5ZPrzCejub-elchNrUWxYHvcfiEQLHRaIGr2yRP8e1XFj3EDRgj2y2JWqZ89dQhKqqQzTbqNzNQi7fPLZRPTPCF7UNLikN8ecAw0dzrvZ2VhFGhtA1bOcctVbH-bcdkGiA18YA4q4"
+                    />
+                </div>
+            </div>
+        </header>
+        <!-- Main Content Canvas -->
+        <main
+            class="ml-64 pt-16 h-screen flex flex-col p-8 overflow-hidden relative"
+        >
+            <!-- 2x2 Video Grid -->
+            <div class="grid grid-cols-2 grid-rows-2 gap-6 h-full pb-20">
+                <!-- Julian Chen -->
+                <div
+                    class="relative group rounded-[32px] overflow-hidden editorial-shadow bg-surface-container-highest border border-outline-variant/10"
+                >
+                    <img
+                        class="w-full h-full object-cover grayscale-[0.2]"
+                        data-alt="A professional male participant, Julian Chen, with glasses and a thoughtful expression, sitting in a modern, plant-filled home office. The lighting is natural and soft, streaming from a side window, creating a calm and intellectual atmosphere consistent with a high-end creative studio vibe."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAesbFq7gQ5c5v5nAJGoHu5ngx6tWuDr2UhqfoHd375_CBTEUxf9umMwQIeJMi8diOV_qcF6I1El1VqxGcuU1gVOAD4RhGRQkMiHCMIcIHTbaD2bSMz2uHNXTd83s6hBOpjmEv2LLwKip_jvRLo43NQYRUJyw1Atb41MITUixx7dVootXkHHVx0s0BNlh4BSkNgDB6s-yquAvHAhZL07QgziFW_UbHAvophTyjlnKdLhuN0x4rueRaxzxq520Z8x1J_GUvUCflhhxTj"
+                    />
+                    <div
+                        class="absolute inset-0 video-overlay-gradient pointer-events-none"
+                    ></div>
+                    <div
+                        class="absolute bottom-6 left-6 flex items-center gap-3"
+                    >
+                        <span class="text-white font-body-bold"
+                            >Julian Chen</span
+                        >
+                        <span
+                            class="material-symbols-outlined text-white/70 text-sm"
+                            >mic</span
+                        >
+                    </div>
+                    <div class="absolute top-6 right-6">
+                        <div
+                            class="w-2 h-2 rounded-full bg-primary shadow-lg shadow-primary/40 animate-pulse"
+                        ></div>
+                    </div>
+                </div>
+                <!-- Marcus Wright -->
+                <div
+                    class="relative group rounded-[32px] overflow-hidden editorial-shadow bg-surface-container-highest border-2 border-primary shadow-[0_0_30px_rgba(128,35,0,0.15)]"
+                >
+                    <img
+                        class="w-full h-full object-cover"
+                        data-alt="Marcus Wright, a creative director with a warm smile, sitting in a studio with exposed brick walls and warm tungsten lighting. He is speaking, indicated by a subtle primary color highlight on the tile. The environment is rich with textures like wood and paper, reinforcing the tactile editorial aesthetic."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3p4SSegY3Iu8BtZiNhw--S4MYzXKF9Mx7iOK60-A4tN30EBsPEvZmMgV5qGKB25haVW2wjle0UuUDeODafND0mb1Z4yDZa-IrAXQSpZRYnD2UzwhgbBs2BdAZgW3vo72c2JeRupPQYpATTcgzKh-WaS7sVVkAdSFh7QzHwc3L--pviE_hFXJPmIRV4G_awWam63AyNbm0AUX1YpjfO6kdsfYI_Y7MDtaRRiHJ3pLeIKEyv8wW9LAK9vmmsXKYvKSwq9qKg-sPnxcu"
+                    />
+                    <div
+                        class="absolute inset-0 video-overlay-gradient pointer-events-none"
+                    ></div>
+                    <div
+                        class="absolute bottom-6 left-6 flex items-center gap-3"
+                    >
+                        <span class="text-white font-body-bold"
+                            >Marcus Wright</span
+                        >
+                        <span
+                            class="material-symbols-outlined text-primary text-sm"
+                            style="font-variation-settings: &quot;FILL&quot; 1"
+                            >graphic_eq</span
+                        >
+                    </div>
+                    <div
+                        class="absolute top-6 right-6 bg-primary/90 text-white text-[10px] font-label-caps px-2 py-0.5 rounded-full uppercase tracking-tighter"
+                    >
+                        Speaking
+                    </div>
+                </div>
+                <!-- Sarah Miller -->
+                <div
+                    class="relative group rounded-[32px] overflow-hidden editorial-shadow bg-surface-container-highest border border-outline-variant/10"
+                >
+                    <img
+                        class="w-full h-full object-cover"
+                        data-alt="Sarah Miller, a professional designer in a bright, white-walled studio. She is looking at her screen with focused attention. The lighting is high-key and clean, mirroring the light-mode design system of The Digital Hearth, with soft shadows and a sense of sophisticated clarity."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX-nBFlPeLWjAt11jdTS8drZ1QqFQhvfpKmv1RnA6N30fZuZA5fJXO23TirchxBft2W2IK2IiZj6l2vMyDexp_Tu5TfHh_4UnAOgpXkvRJPT5iF5ZwggE_FVcP9nwUdWco2r_2Lxhx6qcbp6auCRbxWjC51DJddQ921gbSAJakx5r4ywsiyzEIVW1K0J4TooKfyWzVvJdbLuLBLHUFS10CwGw2LIPol4ubE6FwhmK12RcVYsXvFYsWDGHF5ti4XRk12htiYs7D2bvR"
+                    />
+                    <div
+                        class="absolute inset-0 video-overlay-gradient pointer-events-none"
+                    ></div>
+                    <div
+                        class="absolute bottom-6 left-6 flex items-center gap-3"
+                    >
+                        <span class="text-white font-body-bold"
+                            >Sarah Miller</span
+                        >
+                        <span
+                            class="material-symbols-outlined text-white/70 text-sm"
+                            >mic</span
+                        >
+                    </div>
+                </div>
+                <!-- Self Preview -->
+                <div
+                    class="relative group rounded-[32px] overflow-hidden editorial-shadow bg-surface-container-highest border border-outline-variant/10"
+                >
+                    <img
+                        class="w-full h-full object-cover"
+                        data-alt="A self-preview video feed showing a professional woman in a cozy, cream-toned home office. Her surroundings are minimalist and tidy, with warm accent lighting. The mood is welcoming and professional, fitting perfectly within the warm salon aesthetic of the design system."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4SIH75UFN8bPkG44HOXDTOKUZ3S4JtZ3sD-tF6RuFQ2H_GcvzfqJWaHXRf-gshidJbaoyZTwwwbt3T-p-Isv68d9IwfWZA8Lb3pW3FpDuii2H1kubHVyQQgOONS8BAO-iSE7abv4QFpKhbpaQ0oM5Grnkd6JuaZ47TJrlSnWx0o5_IoLVVLX_sl-_O2DHoYV2qb8YrC1yVV9VX_bYyo5jQhrhlQgSl0kvAL5hD8Qw4S4W7Z89OEwXuwGY-nGUW_h6y8yYiCp8B4WU"
+                    />
+                    <div
+                        class="absolute inset-0 video-overlay-gradient pointer-events-none"
+                    ></div>
+                    <div
+                        class="absolute bottom-6 left-6 flex items-center gap-3"
+                    >
+                        <span class="text-white font-body-bold"
+                            >You (Preview)</span
+                        >
+                        <span
+                            class="material-symbols-outlined text-white/70 text-sm"
+                            >mic</span
+                        >
+                    </div>
+                    <!-- Mini Self Toolbar -->
+                    <div class="absolute top-6 right-6 flex gap-2">
+                        <button
+                            class="w-8 h-8 rounded-full glass-toolbar flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-colors"
+                        >
+                            <span class="material-symbols-outlined text-sm"
+                                >expand_content</span
+                            >
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Floating Control Bar -->
+            <div class="fixed bottom-10 left-1/2 -translate-x-1/2 ml-32">
+                <div
+                    class="glass-toolbar editorial-shadow px-8 py-4 rounded-full flex items-center gap-8 border border-white/40"
+                >
+                    <!-- Main Media Controls -->
+                    <div class="flex items-center gap-4">
+                        <button
+                            class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all duration-200"
+                        >
+                            <span class="material-symbols-outlined">mic</span>
+                        </button>
+                        <button
+                            class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all duration-200"
+                        >
+                            <span class="material-symbols-outlined"
+                                >videocam</span
+                            >
+                        </button>
+                    </div>
+                    <!-- Divider -->
+                    <div class="w-px h-8 bg-outline-variant/30"></div>
+                    <!-- Action Controls -->
+                    <div class="flex items-center gap-4">
+                        <button
+                            class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all duration-200"
+                        >
+                            <span class="material-symbols-outlined"
+                                >present_to_all</span
+                            >
+                        </button>
+                        <button
+                            class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all duration-200"
+                        >
+                            <span class="material-symbols-outlined">mood</span>
+                        </button>
+                        <button
+                            class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all duration-200"
+                        >
+                            <span class="material-symbols-outlined"
+                                >more_horiz</span
+                            >
+                        </button>
+                    </div>
+                    <!-- End Call -->
+                    <button
+                        class="bg-error text-on-error px-6 py-3 rounded-full font-body-bold flex items-center gap-2 shadow-lg shadow-error/20 hover:scale-105 active:scale-95 transition-all"
+                    >
+                        <span
+                            class="material-symbols-outlined"
+                            style="font-variation-settings: &quot;FILL&quot; 1"
+                            >call_end</span
+                        >
+                        Leave
+                    </button>
+                </div>
+            </div>
+        </main>
+        <!-- Interactive Layer: Atmospheric Grain -->
+        <div
+            class="fixed inset-0 pointer-events-none opacity-[0.03] contrast-150"
+            style="
+                background-image: url(&quot;https://www.transparenttextures.com/patterns/natural-paper.png&quot;);
+            "
+        ></div>
+        <script>
+            // Simple micro-interaction for active speaker
+            document.querySelectorAll(".group").forEach((card) => {
+                card.addEventListener("mouseenter", () => {
+                    card.style.transform = "translateY(-4px) scale(1.01)";
+                    card.style.transition =
+                        "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)";
+                });
+                card.addEventListener("mouseleave", () => {
+                    card.style.transform = "translateY(0) scale(1)";
+                });
+            });
+
+            // Toggle Sidebar focus effect
+            const sidebar = document.querySelector("aside");
+            sidebar.addEventListener("mouseenter", () => {
+                document.querySelector("main").classList.add("blur-[2px]");
+                document.querySelector("main").style.transition =
+                    "filter 0.3s ease";
+            });
+            sidebar.addEventListener("mouseleave", () => {
+                document.querySelector("main").classList.remove("blur-[2px]");
+            });
+        </script>
+    </body>
+</html>
